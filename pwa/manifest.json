@@ -1,0 +1,19 @@
+{
+  "name": "ZC Blog",
+  "short_name": "ZC Blog",
+  "description": "A personal blog by engineer",
+  "icons": [{
+    "src": "icons/pwa_icon_128.jpg",
+    "sizes": "128x128",
+    "type": "image/png"
+  }, {
+    "src": "icons/pwa_icon_512.jpg",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
