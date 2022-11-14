@@ -1,6 +1,6 @@
 # Site settings
 title: ZC Blog
-SEOTitle: 瀛愬窛鍟� | ZC Blog
+SEOTitle: 子川啊 | ZC Blog
 header-img: img/post-bg-desk.png
 email: zichuana@stu.shtcm.edu.cn
 description: "Every failure is leading towards success."
@@ -55,22 +55,22 @@ kramdown:
 
 
 
-# 璇勮�虹郴缁�
-# Disqus锛坔ttps://disqus.com/锛�
+
+# Disqusttps://disqus.com/
 # disqus_username: zichuana
 
 # Gitalk
 gitalk:
-  enable: false    #鏄�鍚﹀紑鍚疓italk璇勮��
-  clientID:                           #鐢熸垚鐨刢lientID
-  clientSecret:  #鐢熸垚鐨刢lientSecret
-  repo: Zichuana.github.io    #浠撳簱鍚嶇О
-  owner: Zichuana    #github鐢ㄦ埛鍚�
+  enable: false  
+  clientID:                           
+  clientSecret:  
+  repo: Zichuana.github.io    
+  owner: Zichuana    
   admin: Zichuana
-  distractionFreeMode: true #鏄�鍚﹀惎鐢ㄧ被浼糉B鐨勯槾褰遍伄缃�
+  distractionFreeMode: true 
 
 
-# # 缁熻��
+# # 
 
 # # Analytics settings
 # # Baidu Analytics
@@ -78,15 +78,15 @@ gitalk:
 
 # # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: qiubaiying.top               # 榛樿�ょ殑鏄� auto, 杩欓噷鎴戞槸鑷�瀹氫箟浜嗙殑鍩熷悕锛屼綘濡傛灉娌℃湁鑷�宸辩殑鍩熷悕锛岄渶瑕佹敼鎴恆uto
+# ga_domain: qiubaiying.top               # 
 
 
 
 
 
 # Featured Tags
-featured-tags: true                     # 鏄�鍚︿娇鐢ㄩ�栭〉鏍囩��
-featured-condition-size: 0              # 鐩稿悓鏍囩�炬暟閲忓ぇ浜庤繖涓�鏁帮紝鎵嶄細鍑虹幇鍦ㄩ�栭〉
+featured-tags: true                     # 
+featured-condition-size: 0              # 
 
 
 
