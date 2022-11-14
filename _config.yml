@@ -1,6 +1,6 @@
 # Site settings
 title: ZC Blog
-SEOTitle: 子川啊 | ZC Blog
+SEOTitle: 瀛愬窛鍟� | ZC Blog
 header-img: img/post-bg-desk.png
 email: zichuana@stu.shtcm.edu.cn
 description: "Every failure is leading towards success."
@@ -55,22 +55,22 @@ kramdown:
 
 
 
-# 评论系统
-# Disqus（https://disqus.com/）
+# 璇勮�虹郴缁�
+# Disqus锛坔ttps://disqus.com/锛�
 # disqus_username: zichuana
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 2aa593fc8e165c99cc87                           #生成的clientID
-  clientSecret: 69b0a584209dc19cf8bae2d59fe142d15f3b3cb0   #生成的clientSecret
-  repo: Zichuana.github.io    #仓库名称
-  owner: Zichuana    #github用户名
+  enable: true    #鏄�鍚﹀紑鍚疓italk璇勮��
+  clientID: 2aa593fc8e165c99cc87                           #鐢熸垚鐨刢lientID
+  clientSecret: 69b0a584209dc19cf8bae2d59fe142d15f3b3cb0   #鐢熸垚鐨刢lientSecret
+  repo: Zichuana.github.io    #浠撳簱鍚嶇О
+  owner: Zichuana    #github鐢ㄦ埛鍚�
   admin: Zichuana
-  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  distractionFreeMode: true #鏄�鍚﹀惎鐢ㄧ被浼糉B鐨勯槾褰遍伄缃�
 
 
-# # 统计
+# # 缁熻��
 
 # # Analytics settings
 # # Baidu Analytics
@@ -78,15 +78,15 @@ gitalk:
 
 # # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-# ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+# ga_domain: qiubaiying.top               # 榛樿�ょ殑鏄� auto, 杩欓噷鎴戞槸鑷�瀹氫箟浜嗙殑鍩熷悕锛屼綘濡傛灉娌℃湁鑷�宸辩殑鍩熷悕锛岄渶瑕佹敼鎴恆uto
 
 
 
 
 
 # Featured Tags
-featured-tags: true                     # 是否使用首页标签
-featured-condition-size: 0              # 相同标签数量大于这个数，才会出现在首页
+featured-tags: true                     # 鏄�鍚︿娇鐢ㄩ�栭〉鏍囩��
+featured-condition-size: 0              # 鐩稿悓鏍囩�炬暟閲忓ぇ浜庤繖涓�鏁帮紝鎵嶄細鍑虹幇鍦ㄩ�栭〉
 
 
 
@@ -102,7 +102,7 @@ service-worker: true
 #         title: "WY",
 #         href: "http://zhengwuyang.com"
 #     },{
-#         title: "简书·BY",
+#         title: "绠€涔β稡Y",
 #         href: "http://www.jianshu.com/u/e71990ada2fd"
 #     },{
 #         title: "Apple",
