@@ -61,9 +61,9 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #鏄�鍚﹀紑鍚疓italk璇勮��
-  clientID: 2aa593fc8e165c99cc87                           #鐢熸垚鐨刢lientID
-  clientSecret: 69b0a584209dc19cf8bae2d59fe142d15f3b3cb0   #鐢熸垚鐨刢lientSecret
+  enable: false    #鏄�鍚﹀紑鍚疓italk璇勮��
+  clientID:                           #鐢熸垚鐨刢lientID
+  clientSecret:  #鐢熸垚鐨刢lientSecret
   repo: Zichuana.github.io    #浠撳簱鍚嶇О
   owner: Zichuana    #github鐢ㄦ埛鍚�
   admin: Zichuana
