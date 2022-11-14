@@ -61,9 +61,9 @@ kramdown:
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: 95c49878a71e819418be                            #生成的clientID
-  clientSecret: c99b6e91c873da9ae1898b13442c1d76499c3465    #生成的clientSecret
+  enable: false    #是否开启Gitalk评论
+  clientID:                            #生成的clientID
+  clientSecret:    #生成的clientSecret
   repo: Zichuana.github.io    #仓库名称
   owner: Zichuana    #github用户名
   admin: Zichuana
