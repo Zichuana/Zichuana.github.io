@@ -2,7 +2,7 @@
 layout:     post                    # 使用的布局（不需要改）
 title: Face Comparison Demo                 # 标题 
 subtitle:   一个简易的人脸比对系统 #副标题
-date:       2022-11-14              # 时间
+date:       2022-11-20              # 时间
 author:     zichuana                     # 作者
 header-img: img/2022-11-20/page.jpg   #这篇文章标题背景图片
 catalog: true                       # 是否归档
@@ -13,7 +13,7 @@ tags:                               #标签
 ---
 >基于Facenet-pytorch框架快速实现简单demo
 
-在准备今年的计挑赛人工智能的时候，注意到有不少文章基于`Facenet-pytorch`对两张图像进行比对，浅花点时间跟个风写个简单的demo(不得不说Facenet准确率真顶)。  
+在准备今年的计挑赛人工智能的时候，注意到有不少文章有编写基于`Facenet-pytorch`对两张图像进行比对的方法，浅花点时间跟个风写个简单的demo(不得不说Facenet准确率真顶)。  
 ![image](https://raw.githubusercontent.com/Zichuana/Face-Comparison-System/main/display1.png)
 ![image](https://raw.githubusercontent.com/Zichuana/Face-Comparison-System/main/display2.png)
 制作源码上传至github：  
@@ -113,8 +113,8 @@ def predict():
     return jsonify(info)  # json格式传至前端
 ```
 ### 演示界面
-随便下载一个html模板，目录结构如下保留静态文件夹`static`内的内容。 
-![image](/img/2022-11-20/a.png)
+随便下载一个html模板，目录结构如下保留静态文件夹`static`内的内容。  
+![image](/img/2022-11-20/a.png)  
 这里`data`文件夹暂存前端获取到的图片，以便可能进行的处理。  
 `index.html`文件可以直接套用模板，在模板中添加所需内容。  
 通过`input`获取图像到两张需要传入进行比对的图片，初始化展示结果的方框。这里的布局以及按钮框的类型`class`仿照模板编写。以实现点击按钮调用`test0()`，将图像传给后端，并获取结果。    
