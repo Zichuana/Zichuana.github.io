@@ -1,32 +1,32 @@
 ---
-layout:     post                    # Ê¹ÓÃµÄ²¼¾Ö£¨²»ĞèÒª¸Ä£©
-title: Face Comparison Demo                 # ±êÌâ 
-subtitle:   Ò»¸ö¼òÒ×µÄÈËÁ³±È¶ÔÏµÍ³ #¸±±êÌâ
-date:       2022-11-20              # Ê±¼ä
-author:     zichuana                     # ×÷Õß
-header-img: img/2022-11-20/page.jpg   #ÕâÆªÎÄÕÂ±êÌâ±³¾°Í¼Æ¬
-catalog: true                       # ÊÇ·ñ¹éµµ
-tags:                               #±êÇ©
+layout:     post                    # ä½¿ç”¨çš„å¸ƒå±€ï¼ˆä¸éœ€è¦æ”¹ï¼‰
+title: Face Comparison Demo                 # æ ‡é¢˜ 
+subtitle:   ä¸€ä¸ªç®€æ˜“çš„äººè„¸æ¯”å¯¹ç³»ç»Ÿ #å‰¯æ ‡é¢˜
+date:       2022-11-20              # æ—¶é—´
+author:     zichuana                     # ä½œè€…
+header-img: img/2022-11-20/page.jpg   #è¿™ç¯‡æ–‡ç« æ ‡é¢˜èƒŒæ™¯å›¾ç‰‡
+catalog: true                       # æ˜¯å¦å½’æ¡£
+tags:                               #æ ‡ç­¾
     - facenet
     - flask
     - demo
 ---
->»ùÓÚFacenet-pytorch¿ò¼Ü¿ìËÙÊµÏÖ¼òµ¥demo
+>åŸºäºFacenet-pytorchæ¡†æ¶å¿«é€Ÿå®ç°ç®€å•demo
 
-ÔÚ×¼±¸½ñÄêµÄ¼ÆÌôÈüÈË¹¤ÖÇÄÜµÄÊ±ºò£¬×¢Òâµ½ÓĞ²»ÉÙÎÄÕÂÓĞ±àĞ´»ùÓÚ`Facenet-pytorch`¶ÔÁ½ÕÅÍ¼Ïñ½øĞĞ±È¶ÔµÄ·½·¨£¬Ç³»¨µãÊ±¼ä¸ú¸ö·çĞ´¸ö¼òµ¥µÄdemo(²»µÃ²»ËµFacenet×¼È·ÂÊÕæ¶¥)¡£  
+åœ¨å‡†å¤‡ä»Šå¹´çš„è®¡æŒ‘èµ›äººå·¥æ™ºèƒ½çš„æ—¶å€™ï¼Œæ³¨æ„åˆ°æœ‰ä¸å°‘æ–‡ç« æœ‰ç¼–å†™åŸºäº`Facenet-pytorch`å¯¹ä¸¤å¼ å›¾åƒè¿›è¡Œæ¯”å¯¹çš„æ–¹æ³•ï¼Œæµ…èŠ±ç‚¹æ—¶é—´è·Ÿä¸ªé£å†™ä¸ªç®€å•çš„demo(ä¸å¾—ä¸è¯´Facenetå‡†ç¡®ç‡çœŸé¡¶)ã€‚  
 ![image](https://raw.githubusercontent.com/Zichuana/Face-Comparison-System/main/display1.png)
 ![image](https://raw.githubusercontent.com/Zichuana/Face-Comparison-System/main/display2.png)
-ÖÆ×÷Ô´ÂëÉÏ´«ÖÁgithub£º  
+åˆ¶ä½œæºç ä¸Šä¼ è‡³githubï¼š  
 [https://github.com/Zichuana/Face-Comparison-System](https://github.com/Zichuana/Face-Comparison-System)  
-ËùÓÃµ½µÄÖ÷¸É¿â£¬¼°Æä¶ÔÓ¦°æ±¾£º  
+æ‰€ç”¨åˆ°çš„ä¸»å¹²åº“ï¼ŒåŠå…¶å¯¹åº”ç‰ˆæœ¬ï¼š  
 ```
 Flask                        2.2.1
 opencv-python                4.6.0.66
 torch                        1.12.1
 facenet-pytorch              2.5.2
 ```
-### ¹¦ÄÜÊµÏÖ
-¹¦ÄÜÊµÏÖ±àĞ´ÔÚ`app.py`ÄÚ£¬ºóÃæ»áÕ¹Ê¾Ä¿Â¼½á¹¹£¬µ¼ÈëËùĞè¿â²¢³õÊ¼»¯ÏîÄ¿¡£ 
+### åŠŸèƒ½å®ç°
+åŠŸèƒ½å®ç°ç¼–å†™åœ¨`app.py`å†…ï¼Œåé¢ä¼šå±•ç¤ºç›®å½•ç»“æ„ï¼Œå¯¼å…¥æ‰€éœ€åº“å¹¶åˆå§‹åŒ–é¡¹ç›®ã€‚ 
 
 ```
 from flask import Flask, jsonify, render_template, request
@@ -39,30 +39,30 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 
 app = Flask(__name__, static_url_path="/")
 
-# ×Ô¶¯ÖØÔØÄ£°åÎÄ¼ş
+# è‡ªåŠ¨é‡è½½æ¨¡æ¿æ–‡ä»¶
 app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-# ÉèÖÃ¾²Ì¬ÎÄ¼ş»º´æ¹ıÆÚÊ±¼ä
+# è®¾ç½®é™æ€æ–‡ä»¶ç¼“å­˜è¿‡æœŸæ—¶é—´
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 ```
-»ñµÃÈËÁ³ÌØÕ÷ÏòÁ¿¡£  
+è·å¾—äººè„¸ç‰¹å¾å‘é‡ã€‚  
 ```
 def load_known_faces(dstImgPath, mtcnn, resnet):
     aligned = []
-    knownImg = cv2.imread(dstImgPath)  # ¶ÁÈ¡Í¼Æ¬
-    face = mtcnn(knownImg)  # Ê¹ÓÃmtcnn¼ì²âÈËÁ³£¬·µ»Ø¡¾ÈËÁ³Êı×é¡¿
+    knownImg = cv2.imread(dstImgPath)  # è¯»å–å›¾ç‰‡
+    face = mtcnn(knownImg)  # ä½¿ç”¨mtcnnæ£€æµ‹äººè„¸ï¼Œè¿”å›ã€äººè„¸æ•°ç»„ã€‘
     print(face)
     if face is not None:
         aligned.append(face[0])
     print(aligned)
     aligned = torch.stack(aligned).to(device)
     with torch.no_grad():
-        known_faces_emb = resnet(aligned).detach().cpu()  # Ê¹ÓÃresnetÄ£ĞÍ»ñÈ¡ÈËÁ³¶ÔÓ¦µÄÌØÕ÷ÏòÁ¿
-    # print("\nÈËÁ³¶ÔÓ¦µÄÌØÕ÷ÏòÁ¿Îª£º\n", known_faces_emb)
+        known_faces_emb = resnet(aligned).detach().cpu()  # ä½¿ç”¨resnetæ¨¡å‹è·å–äººè„¸å¯¹åº”çš„ç‰¹å¾å‘é‡
+    # print("\näººè„¸å¯¹åº”çš„ç‰¹å¾å‘é‡ä¸ºï¼š\n", known_faces_emb)
     return known_faces_emb, knownImg
 ```
-¼ÆËãÈËÁ³ÌØÕ÷ÏòÁ¿¼äµÄÅ·ÊÏ¾àÀë£¬ÉèÖÃãĞÖµ£¬ÅĞ¶ÏÊÇ·ñÎªÍ¬Ò»¸öÈËÁ³¡£  
+è®¡ç®—äººè„¸ç‰¹å¾å‘é‡é—´çš„æ¬§æ°è·ç¦»ï¼Œè®¾ç½®é˜ˆå€¼ï¼Œåˆ¤æ–­æ˜¯å¦ä¸ºåŒä¸€ä¸ªäººè„¸ã€‚  
 ```
 def match_faces(faces_emb, known_faces_emb, threshold):
     isExistDst = False
@@ -71,13 +71,13 @@ def match_faces(faces_emb, known_faces_emb, threshold):
         isExistDst = True
     return distance, isExistDst
 ```
-¶¨Òå¸ùÒ³ÃæÎªindex.html(Êµ¼ÊÉÏÑİÊ¾Ò²Ö»ĞèÒªÕâÒ»¸öÒ³Ãæ)¡£  
+å®šä¹‰æ ¹é¡µé¢ä¸ºindex.html(å®é™…ä¸Šæ¼”ç¤ºä¹Ÿåªéœ€è¦è¿™ä¸€ä¸ªé¡µé¢)ã€‚  
 ```
 @app.route('/', methods=['GET', 'POST'])
 def root():
     return render_template("index.html")
 ```
-¶¨Òå`/predict`Â·ÓÉ£¬¶Ô´Ó`request`»ñÈ¡µ½µÄÁ½ÕÅÍ¼Æ¬½øĞĞ·ÖÎö£¬½«½á¹û´«µİ¸øÇ°¶Ë¡£  
+å®šä¹‰`/predict`è·¯ç”±ï¼Œå¯¹ä»`request`è·å–åˆ°çš„ä¸¤å¼ å›¾ç‰‡è¿›è¡Œåˆ†æï¼Œå°†ç»“æœä¼ é€’ç»™å‰ç«¯ã€‚  
 ```
 @app.route("/predict", methods=["GET", "POST"])
 @torch.no_grad()
@@ -92,32 +92,32 @@ def predict():
         image1.save(image_path1)
         image2.save(image_path2)
         mtcnn = MTCNN(min_face_size=12, thresholds=[0.2, 0.2, 0.3], keep_all=True, device=device)
-        # InceptionResnetV1Ä£ĞÍ¼ÓÔØ¡¾ÓÃÓÚ»ñÈ¡ÈËÁ³ÌØÕ÷ÏòÁ¿¡¿
+        # InceptionResnetV1æ¨¡å‹åŠ è½½ã€ç”¨äºè·å–äººè„¸ç‰¹å¾å‘é‡ã€‘
         resnet = InceptionResnetV1(pretrained='vggface2').eval().to(device)
-        MatchThreshold = 0.8  # ÈËÁ³ÌØÕ÷ÏòÁ¿Æ¥ÅäãĞÖµÉèÖÃ
+        MatchThreshold = 0.8  # äººè„¸ç‰¹å¾å‘é‡åŒ¹é…é˜ˆå€¼è®¾ç½®
 
-        known_faces_emb, _ = load_known_faces(image_path1, mtcnn, resnet)  # ÒÑÖªÈËÎïÍ¼
+        known_faces_emb, _ = load_known_faces(image_path1, mtcnn, resnet)  # å·²çŸ¥äººç‰©å›¾
         # bFaceThin.png  lyf2.jpg
-        faces_emb, img = load_known_faces(image_path2, mtcnn, resnet)  # ´ı¼ì²âÈËÎïÍ¼
-        distance, isExistDst = match_faces(faces_emb, known_faces_emb, MatchThreshold)  # ÈËÁ³Æ¥Åä
-        info["oushi"] = "Á½ÕÅÈËÁ³µÄÅ·Ê½¾àÀëÎª£º{}".format(distance)
-        info["fazhi"] = "ÉèÖÃµÄÈËÁ³ÌØÕ÷ÏòÁ¿Æ¥ÅäãĞÖµÎª£º{}".format(MatchThreshold)
+        faces_emb, img = load_known_faces(image_path2, mtcnn, resnet)  # å¾…æ£€æµ‹äººç‰©å›¾
+        distance, isExistDst = match_faces(faces_emb, known_faces_emb, MatchThreshold)  # äººè„¸åŒ¹é…
+        info["oushi"] = "ä¸¤å¼ äººè„¸çš„æ¬§å¼è·ç¦»ä¸ºï¼š{}".format(distance)
+        info["fazhi"] = "è®¾ç½®çš„äººè„¸ç‰¹å¾å‘é‡åŒ¹é…é˜ˆå€¼ä¸ºï¼š{}".format(MatchThreshold)
         print("OK")
         if isExistDst:
-            boxes, prob, landmarks = mtcnn.detect(img, landmarks=True)  # ·µ»ØÈËÁ³¿ò£¬¸ÅÂÊ£¬5¸öÈËÁ³¹Ø¼üµã
-            info["result"] = 'ÓÉÓÚÅ·ÊÏ¾àÀëĞ¡ÓÚÆ¥ÅäãĞÖµ£¬Æ¥Åä£¡¸ÃÅĞ¶Ï·½Ê½ÏÂÊÇÒ»¸öÈË£¡'
+            boxes, prob, landmarks = mtcnn.detect(img, landmarks=True)  # è¿”å›äººè„¸æ¡†ï¼Œæ¦‚ç‡ï¼Œ5ä¸ªäººè„¸å…³é”®ç‚¹
+            info["result"] = 'ç”±äºæ¬§æ°è·ç¦»å°äºåŒ¹é…é˜ˆå€¼ï¼ŒåŒ¹é…ï¼è¯¥åˆ¤æ–­æ–¹å¼ä¸‹æ˜¯ä¸€ä¸ªäººï¼'
         else:
-            info["result"] = 'ÓÉÓÚÅ·ÊÏ¾àÀë´óÓÚÆ¥ÅäãĞÖµ£¬²»Æ¥Åä£¡¸ÃÅĞ¶Ï·½Ê½ÏÂ²»ÊÇÒ»¸öÈË£¡'
+            info["result"] = 'ç”±äºæ¬§æ°è·ç¦»å¤§äºåŒ¹é…é˜ˆå€¼ï¼Œä¸åŒ¹é…ï¼è¯¥åˆ¤æ–­æ–¹å¼ä¸‹ä¸æ˜¯ä¸€ä¸ªäººï¼'
     except Exception as e:
         info["err"] = str(e)
-    return jsonify(info)  # json¸ñÊ½´«ÖÁÇ°¶Ë
+    return jsonify(info)  # jsonæ ¼å¼ä¼ è‡³å‰ç«¯
 ```
-### ÑİÊ¾½çÃæ
-Ëæ±ãÏÂÔØÒ»¸öhtmlÄ£°å£¬Ä¿Â¼½á¹¹ÈçÏÂ±£Áô¾²Ì¬ÎÄ¼ş¼Ğ`static`ÄÚµÄÄÚÈİ¡£  
+### æ¼”ç¤ºç•Œé¢
+éšä¾¿ä¸‹è½½ä¸€ä¸ªhtmlæ¨¡æ¿ï¼Œç›®å½•ç»“æ„å¦‚ä¸‹ä¿ç•™é™æ€æ–‡ä»¶å¤¹`static`å†…çš„å†…å®¹ã€‚  
 ![image](/img/2022-11-20/a.png)  
-ÕâÀï`data`ÎÄ¼ş¼ĞÔİ´æÇ°¶Ë»ñÈ¡µ½µÄÍ¼Æ¬£¬ÒÔ±ã¿ÉÄÜ½øĞĞµÄ´¦Àí¡£  
-`index.html`ÎÄ¼ş¿ÉÒÔÖ±½ÓÌ×ÓÃÄ£°å£¬ÔÚÄ£°åÖĞÌí¼ÓËùĞèÄÚÈİ¡£  
-Í¨¹ı`input`»ñÈ¡Í¼Ïñµ½Á½ÕÅĞèÒª´«Èë½øĞĞ±È¶ÔµÄÍ¼Æ¬£¬³õÊ¼»¯Õ¹Ê¾½á¹ûµÄ·½¿ò¡£ÕâÀïµÄ²¼¾ÖÒÔ¼°°´Å¥¿òµÄÀàĞÍ`class`·ÂÕÕÄ£°å±àĞ´¡£ÒÔÊµÏÖµã»÷°´Å¥µ÷ÓÃ`test0()`£¬½«Í¼Ïñ´«¸øºó¶Ë£¬²¢»ñÈ¡½á¹û¡£    
+è¿™é‡Œ`data`æ–‡ä»¶å¤¹æš‚å­˜å‰ç«¯è·å–åˆ°çš„å›¾ç‰‡ï¼Œä»¥ä¾¿å¯èƒ½è¿›è¡Œçš„å¤„ç†ã€‚  
+`index.html`æ–‡ä»¶å¯ä»¥ç›´æ¥å¥—ç”¨æ¨¡æ¿ï¼Œåœ¨æ¨¡æ¿ä¸­æ·»åŠ æ‰€éœ€å†…å®¹ã€‚  
+é€šè¿‡`input`è·å–å›¾åƒåˆ°ä¸¤å¼ éœ€è¦ä¼ å…¥è¿›è¡Œæ¯”å¯¹çš„å›¾ç‰‡ï¼Œåˆå§‹åŒ–å±•ç¤ºç»“æœçš„æ–¹æ¡†ã€‚è¿™é‡Œçš„å¸ƒå±€ä»¥åŠæŒ‰é’®æ¡†çš„ç±»å‹`class`ä»¿ç…§æ¨¡æ¿ç¼–å†™ã€‚ä»¥å®ç°ç‚¹å‡»æŒ‰é’®è°ƒç”¨`test0()`ï¼Œå°†å›¾åƒä¼ ç»™åç«¯ï¼Œå¹¶è·å–ç»“æœã€‚    
 ```
     <!-- Start Upcoming Events Section -->
     <section class="bg-upcoming-events">
@@ -126,7 +126,7 @@ def predict():
                 <div class="upcoming-events">
                     <div class="section-header">
                         <h2>&#129409;</h2>
-                        <p>ÉÏ´«ĞèÒªÅĞ¶ÏÊÇ·ñÎªÍ¬Ò»ÈËµÄÁ½ÕÅÁ³²¿Í¼Ïñ£¬µã»÷²âÊÔ°´Å¥½øĞĞ±È¶Ô·ÖÎö</p>
+                        <p>ä¸Šä¼ éœ€è¦åˆ¤æ–­æ˜¯å¦ä¸ºåŒä¸€äººçš„ä¸¤å¼ è„¸éƒ¨å›¾åƒï¼Œç‚¹å‡»æµ‹è¯•æŒ‰é’®è¿›è¡Œæ¯”å¯¹åˆ†æ</p>
                     </div>
                     <!-- .section-header -->
                     <div class="row">
@@ -158,9 +158,9 @@ def predict():
                             <!--                style="margin-top:20px;width: 35rem;height: 30rem; padding-left: 20px"-->
                             <input class="btn btn-default" type="button" id="b0"
                                    onclick="test0()" style="color: #000000"
-                                   value="Ô¤²â">
+                                   value="é¢„æµ‹">
                             <p></p>
-                            <pre id="out">&#129300;µã»÷Ô¤²â»ñÈ¡½á¹û</pre>
+                            <pre id="out">&#129300;ç‚¹å‡»é¢„æµ‹è·å–ç»“æœ</pre>
                             <!--                <pre id="out" style="width:320px;height:50px;line-height: 50px;margin-top:20px;"></pre>-->
                         </div>
                     </div>
@@ -174,18 +174,18 @@ def predict():
     </section>
     <!-- End Upcoming Events Section -->s
 ```
-ÔÚÄ©Î²¼ÓÉÏ`<script>`ÔªËØ£¬±àĞ´`test0()`¹¦ÄÜ£¬½«Í¼Æ¬`img0`Óë`img1`´«µİ¸øºó¶Ë¡£  
+åœ¨æœ«å°¾åŠ ä¸Š`<script>`å…ƒç´ ï¼Œç¼–å†™`test0()`åŠŸèƒ½ï¼Œå°†å›¾ç‰‡`img0`ä¸`img1`ä¼ é€’ç»™åç«¯ã€‚  
 ```
 <script type="text/javascript">
     $("#file0").change(function () {
-        var objUrl = getObjectURL(this.files[0]);//»ñÈ¡ÎÄ¼şĞÅÏ¢
+        var objUrl = getObjectURL(this.files[0]);//è·å–æ–‡ä»¶ä¿¡æ¯
         console.log("objUrl = " + objUrl);
         if (objUrl) {
             $("#img0").attr("src", objUrl);
         }
     });
     $("#file1").change(function () {
-        var objUrl = getObjectURL(this.files[0]);//»ñÈ¡ÎÄ¼şĞÅÏ¢
+        var objUrl = getObjectURL(this.files[0]);//è·å–æ–‡ä»¶ä¿¡æ¯
         console.log("objUrl = " + objUrl);
         if (objUrl) {
             $("#img1").attr("src", objUrl);
@@ -205,15 +205,15 @@ def predict():
             type: 'POST',
             url: "predict",
             data: form,
-            async: false,       //Í¬²½Ö´ĞĞ
-            processData: false, // ¸æËßjqueryÒª´«Êädata¶ÔÏó
-            contentType: false, //¸æËßjquery²»ĞèÒªÔö¼ÓÇëÇóÍ·¶ÔÓÚcontentTypeµÄÉèÖÃ
+            async: false,       //åŒæ­¥æ‰§è¡Œ
+            processData: false, // å‘Šè¯‰jqueryè¦ä¼ è¾“dataå¯¹è±¡
+            contentType: false, //å‘Šè¯‰jqueryä¸éœ€è¦å¢åŠ è¯·æ±‚å¤´å¯¹äºcontentTypeçš„è®¾ç½®
             success: function (arg) {
                 console.log(arg)
                 out = arg.fazhi + '\n' + arg.oushi + '\n' + arg.result
                 err = arg.err
             }, error: function () {
-                console.log("ºóÌ¨´¦Àí´íÎó");
+                console.log("åå°å¤„ç†é”™è¯¯");
             }
         });
 
