@@ -28,7 +28,7 @@ facenet-pytorch              2.5.2
 ### 功能实现
 功能实现编写在`app.py`内，后面会展示目录结构，导入所需库并初始化项目。 
 
-```
+```python
 from flask import Flask, jsonify, render_template, request
 from datetime import timedelta
 import cv2
@@ -47,7 +47,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 ```
 获得人脸特征向量。  
-```
+```python
 def load_known_faces(dstImgPath, mtcnn, resnet):
     aligned = []
     knownImg = cv2.imread(dstImgPath)  # 读取图片
@@ -63,7 +63,7 @@ def load_known_faces(dstImgPath, mtcnn, resnet):
     return known_faces_emb, knownImg
 ```
 计算人脸特征向量间的欧氏距离，设置阈值，判断是否为同一个人脸。  
-```
+```python
 def match_faces(faces_emb, known_faces_emb, threshold):
     isExistDst = False
     distance = (known_faces_emb[0] - faces_emb[0]).norm().item()
@@ -72,13 +72,13 @@ def match_faces(faces_emb, known_faces_emb, threshold):
     return distance, isExistDst
 ```
 定义根页面为index.html(实际上演示也只需要这一个页面)。  
-```
+```python
 @app.route('/', methods=['GET', 'POST'])
 def root():
     return render_template("index.html")
 ```
 定义`/predict`路由，对从`request`获取到的两张图片进行分析，将结果传递给前端。  
-```
+```python
 @app.route("/predict", methods=["GET", "POST"])
 @torch.no_grad()
 def predict():
@@ -118,7 +118,7 @@ def predict():
 这里`data`文件夹暂存前端获取到的图片，以便可能进行的处理。  
 `index.html`文件可以直接套用模板，在模板中添加所需内容。  
 通过`input`获取图像到两张需要传入进行比对的图片，初始化展示结果的方框。这里的布局以及按钮框的类型`class`仿照模板编写。以实现点击按钮调用`test0()`，将图像传给后端，并获取结果。    
-```
+```html
     <!-- Start Upcoming Events Section -->
     <section class="bg-upcoming-events">
         <div class="container">
@@ -175,7 +175,7 @@ def predict():
     <!-- End Upcoming Events Section -->s
 ```
 在末尾加上`<script>`元素，编写`test0()`功能，将图片`img0`与`img1`传递给后端。  
-```
+```html
 <script type="text/javascript">
     $("#file0").change(function () {
         var objUrl = getObjectURL(this.files[0]);//获取文件信息

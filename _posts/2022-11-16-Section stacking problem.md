@@ -17,7 +17,7 @@ itk-SNAP展示[数据集](https://www.kaggle.com/code/andrewmvd/covid-19-ct-scan
 与之相对应的未分割图像  
 ![image](/img/2022-11-16/b.png)  
 ### 使用SimpleITK组件读取影像，vtk组件进行图像展示  
-```
+```python
 from vtk.util.vtkImageImportFromArray import *
 import vtk
 import SimpleITK as sitk
@@ -235,7 +235,7 @@ iren.Start()
 ``` 
 ![image](/img/2022-11-16/c.png)  
 ### 获取切面组  
-```
+```python
 import os
 import nibabel as nib
 import shutil
@@ -255,7 +255,7 @@ for i in range(z):  # z是图像的序列
 ```
 ![image](/img/2022-11-16/d.png)
 ### 旋转并重新堆叠成nii文件  
-```
+```python
 import os
 import cv2
 from PIL import Image
