@@ -2,7 +2,7 @@
 layout:     post                    # 使用的布局（不需要改）
 title:      安徽省大数据与人工智能竞赛人工智能软件赛-深度学习               # 标题 
 subtitle:   网络赛与现场赛第四题深度学习代码 #副标题
-date:       2022-11-36              # 时间
+date:       2022-11-26              # 时间
 author:     zichuana                     # 作者
 header-img: img/2022-11-26/page.png    #这篇文章标题背景图片
 catalog: true                       # 是否归档
