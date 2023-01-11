@@ -10,6 +10,8 @@ tags:                               #标签
     - 深度学习
 ---
 > 源码上传至github[https://github.com/Zichuana/Face-comparison-competition-solution](https://github.com/Zichuana/Face-comparison-competition-solution)
+> 该解决方案获得华东赛区一等奖，国赛二等奖
+
 ## 1.整个赛题的解决思路以及用到的数据处理方法
 ### 解决思路与引用介绍
 *解决第四届计算机能力挑战赛大数据与人工智能赛题*  
