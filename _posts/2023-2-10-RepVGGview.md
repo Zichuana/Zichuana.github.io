@@ -139,6 +139,8 @@ torch.Size([1, 1280])
 torch.Size([1, num_classes])  
 
 ### 绘制结果
+**input**
+![image](/img/2023-2-10/input.png)
 **stage0**  
 ![image](/img/2023-2-10/stage0.png)
 **stage1**  
