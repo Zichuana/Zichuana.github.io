@@ -12,7 +12,7 @@ html {
 }
 body {
   margin: 0;
-  cursor: url('https://blog-static.cnblogs.com/files/lucas--liu/cat16.ico'), auto;
+  cursor: url(/normal.cur), auto;
 }
 article,
 aside,
