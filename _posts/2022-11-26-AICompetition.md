@@ -7,7 +7,6 @@ author:     zichuana                     # 作者
 header-img: img/2022-11-26/page.png    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
-    - 碎碎念
     - 深度学习
 ---
 > (⑉꒦ິ^꒦ິ⑉)	

@@ -7,7 +7,7 @@ author:     zichuana                     # 作者
 header-img: img/post-bg-desk2.png    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
-    - 碎碎念
+    - 笔记
 ---
 ### 创建
 首先确定所创建的python库没有重名，假定为XXX。  
