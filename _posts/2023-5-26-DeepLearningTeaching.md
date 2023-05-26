@@ -129,11 +129,11 @@ for epoch in range(10):
     for index, (batch_x, batch_y) in enumerate(train_loader):
         out = net(batch_x.to(device))
         loss = loss_func(out, batch_y)
-        train_loss += loss.item()
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-    print('Epoch:{} Train Loss:{}'.format(epoch + 1, train_loss / train_data_len))
+        train_loss += loss.item()
+    print('Epoch:{} Train Loss:{}'.format(epoch + 1, train_loss / len(train_loader)))
 
 net.eval()
 with torch.no_grad():

@@ -13,6 +13,36 @@ tags:                               #标签
 
 ## 网络赛
 ### 题目
+**注意下面代码有两处不严谨错误**
+```python
+out = net(batch_x.to(device))
+loss = loss_func(out, batch_y)
+train_loss += loss.item()
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()
+```
+改为
+```python
+out = net(batch_x.to(device))
+loss = loss_func(out, batch_y)
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()
+train_loss += loss.item()
+```
+得到  
+```python
+train_steps = len(train_loader)
+```
+将
+```python
+print('Epoch:{} Train Loss:{}'.format(epoch + 1, train_loss / train_data_len))
+```
+改为
+```python
+print('Epoch:{} Train Loss:{}'.format(epoch + 1, train_loss / train_steps))
+```
 “第四部分”文件夹为本题的数据文件，含有100张交通场景监控图片及其对应的训练和测试标签文件trainlabels.txt和testlabels.txt。标签文件第1列表示图片路径，第2-8列表示其对应的图片中是否存在对应的车型，若存在则用1表示，若不存在则用0表示。请根据要求利用卷积神经网络实现图片的多标签分类功能。  
 要求与说明：  
 （1）本体旨在考察参赛者使用深度学习库解决具体计算机视觉问题的完整流程，不以测试集准确率作为评分标准；  
