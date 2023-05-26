@@ -4,7 +4,7 @@ title:      创建python库方法指南               # 标题
 subtitle:   一个笔记嗯
 date:       2023-3-3              # 时间
 author:     zichuana                     # 作者
-header-img: img/post-bg-desk2.png    #这篇文章标题背景图片
+header-img: img/post-bg-desk.png    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - 笔记

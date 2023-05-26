@@ -7,7 +7,7 @@ author:     zichuana                     # 作者
 header-img: img/2023-5-26/page.jpg    #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
-    - 笔记
+    - 深度学习
     - flask
 ---
 > 本节介绍代码结构  
