@@ -16,26 +16,26 @@ tags:                               #标签
 通常训练一个模型是需要划分成，训练集，验证集和测试集的。在测试集和验证集上训练，在测试集上测试，两者都可以作为评价模型的标准。  
 关于这一点的介绍，我决定写注释来介绍代码，原理感兴趣就听李沐老师吧！  
 ```python
-train_steps = len(train_loader)  # 获取每一次epoch内传入图像的泼数，一泼16张
+train_steps = len(train_loader)  # 获取每一次epoch内传入图像的泼数，一泼16张  
 net = NET(mask_len)
 net.to(device)
-optimizer = torch.optim.Adam(net.parameters(), lr=0.01)  # 创建一个优化器，在这里选用你模型训练阶段所使用的优化器
-loss_func = torch.nn.L1Loss()  # 创建一个损失函数
-for epoch in range(10):   # 这里epoch 10次意思一下
-    train_loss = 0.0  # 指的是每一次epoch的loss和acc 不要和下面index混淆了
+optimizer = torch.optim.Adam(net.parameters(), lr=0.01)  # 创建一个优化器，在这里选用你模型训练阶段所使用的优化器  
+loss_func = torch.nn.L1Loss()  # 创建一个损失函数  
+for epoch in range(10):   # 这里epoch 10次意思一下  
+    train_loss = 0.0  # 指的是每一次epoch的loss和acc 不要和下面index混淆了  
     train_acc = 0.0
-    for index, (batch_x, batch_y) in enumerate(train_loader):  # 将打包在train_loader的图像送进去
-        out = net(batch_x.to(device))  # 可以理解成网络学习的结果
-        loss = loss_func(out, batch_y)  # 使用损失函数计算这一次index的损失值
-        optimizer.zero_grad()  # 优化器清零
-        loss.backward()  # 损失结果反向传播
-        optimizer.step()  # 优化器使用
-        train_loss += loss.item()  # 加到train_loss里面，再用train_loss除以传入图像的泼数就是这一次epoch的loss平均值了，用这个值
-        similar = torch.cosine_similarity(out, batch_y.to(device))  # 计算相似度
-        train_acc += similar.sum().item()  # 将相似度整合到总准确率中，这里除与总的图像张数，得到每张图像的平均准确率
+    for index, (batch_x, batch_y) in enumerate(train_loader):  # 将打包在train_loader的图像送进去  
+        out = net(batch_x.to(device))  # 可以理解成网络学习的结果  
+        loss = loss_func(out, batch_y)  # 使用损失函数计算这一次index的损失值  
+        optimizer.zero_grad()  # 优化器清零  
+        loss.backward()  # 损失结果反向传播  
+        optimizer.step()  # 优化器使用  
+        train_loss += loss.item()  # 加到train_loss里面，再用train_loss除以传入图像的泼数就是这一次epoch的loss平均值了，用这个值  
+        similar = torch.cosine_similarity(out, batch_y.to(device))  # 计算相似度  
+        train_acc += similar.sum().item()  # 将相似度整合到总准确率中，这里除与总的图像张数，得到每张图像的平均准确率  
     print('Epoch:{} Train Loss:{} acc:{}'.format(epoch + 1, train_loss / train_steps, train_acc / train_data_len))
 
-    net.eval()  # 不在反向传播了，这里是开始测试或者验证的标志
+    net.eval()  # 不在反向传播了，这里是开始测试或者验证的标志  
     val_acc = 0.0
     with torch.no_grad():
         for index, (batch_x, batch_y) in enumerate(test_loader):
