@@ -1,10 +1,10 @@
 # Site settings
-title: ZC Blog
-SEOTitle: 子川啊 | ZC Blog
+title: Sumyee Blog
+SEOTitle: 子川啊 | Sumyee Blog
 header-img: img/post-bg-desk.jpg
 email: zichuana@stu.ahtcm.edu.cn
 description: "Every failure is leading towards success."
-keyword: "zichuana, ZC, 子川啊, ZC Blog"
+keyword: "zichuana, Sumyee, 子川啊, Sumyee Blog"
 url: "http://zichuana.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/Zichuana/Zichuana.github.io" # you code repository
