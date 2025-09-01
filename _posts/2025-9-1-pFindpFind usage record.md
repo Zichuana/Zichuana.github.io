@@ -80,26 +80,26 @@ timsTOF 默认使用 PASEF（Parallel Accumulation–Serial Fragmentation），�
 
 ✅ Variable Modifications（可变修饰）  
 
-| 修饰                           | 含义         |
-| ---------------------------- | ---------- |
-| **Acetyl\[Any N-term]**      | 蛋白 N 端乙酰化  |
-| **Acetyl\[K]**               | 赖氨酸乙酰化     |
-| **Oxidation\[M]**            | 甲硫氨酸氧化     |
-| **Amidated \[Any C-term]**   | C 端酰胺化     |
-| **Carbamyl \[K/Any N-term]** | 尿素诱导的氨基甲酰化 |
-| **Cation:Na \[Any C-term]**  | 钠离子加合物     |
+| 修饰                           | 含义         |  
+| ---------------------------- | ---------- |  
+| **Acetyl\[Any N-term]**      | 蛋白 N 端乙酰化  |  
+| **Acetyl\[K]**               | 赖氨酸乙酰化     |  
+| **Oxidation\[M]**            | 甲硫氨酸氧化     |  
+| **Amidated \[Any C-term]**   | C 端酰胺化     |  
+| **Carbamyl \[K/Any N-term]** | 尿素诱导的氨基甲酰化 |  
+| **Cation:Na \[Any C-term]**  | 钠离子加合物     |  
 
 Oxidation\[M]为参考视频中推荐
 
 ✅ Result Filter（结果过滤）  
 - 默认即可  
 
-| 参数                           | 值                        | 含义                |
-| ---------------------------- | ------------------------ | ----------------- |
-| **FDR ≤ 1%**                 | 假发现率控制在 1% 以内，**标准过滤阈值** |                   |
-| **Peptide Mass Range**       | 600–10000 Da             | 过滤掉过小或过大的肽段，避免异常值 |
-| **Min Peptides per Protein** | ≥1                       | 每个蛋白至少有一条肽段支持     |
-| **Show Proteins / Peptides** | 显示蛋白或肽段级别的结果             |                   |
+| 参数                           | 值                        | 含义                |  
+| ---------------------------- | ------------------------ | ----------------- |  
+| **FDR ≤ 1%**                 | 假发现率控制在 1% 以内，**标准过滤阈值** |                   |  
+| **Peptide Mass Range**       | 600–10000 Da             | 过滤掉过小或过大的肽段，避免异常值 |  
+| **Min Peptides per Protein** | ≥1                       | 每个蛋白至少有一条肽段支持     |  
+| **Show Proteins / Peptides** | 显示蛋白或肽段级别的结果             |                   |  
 
 ![image](/img/2025-9-1/b.png) 
 
@@ -120,11 +120,11 @@ Oxidation\[M]为参考视频中推荐
 
 ✅ Multiplicity（标记类型选择）
 下面仍然列出了可选的标记类型，这些是备用选项，不影响当前结果：  
-| 选项                  | 含义                                   |
-| ------------------- | ------------------------------------ |
-| **15N\_Labeling**   | 全氮15标记（如细菌培养在15N培养基中）                |
-| **13C\_Labeling**   | 全碳13标记                               |
-| **SILAC-Arg10Lys8** | 经典 SILAC 标记，重标精氨酸（+10 Da）和赖氨酸（+8 Da） |
+| 选项                  | 含义                                   |  
+| ------------------- | ------------------------------------ |  
+| **15N\_Labeling**   | 全氮15标记（如细菌培养在15N培养基中）                |  
+| **13C\_Labeling**   | 全碳13标记                               |  
+| **SILAC-Arg10Lys8** | 经典 SILAC 标记，重标精氨酸（+10 Da）和赖氨酸（+8 Da） |  
 
 **默认即可**  
 ✅ Number of Scans Per Half CMTG  
@@ -143,18 +143,18 @@ Save后Start
 ## Kimi分析结果文件  
 
 **噬盐菌（Halophiles）代表性蛋白发现**  
-| 蛋白名称            | 物种来源                                     | 功能/特征                 | 备注             |
-| --------------- | ---------------------------------------- | --------------------- | -------------- |
-| **GLPK\_HALSA** | *Halobacterium salinarum*                | 甘油激酶（glycerol kinase） | 经典嗜盐古菌，适应高盐环境  |
-| **GLPK\_HALMA** | *Haloarcula marismortui*                 | 甘油激酶                  | 极端嗜盐菌，分离自死海    |
-| **SODF\_METTH** | *Methanothermobacter thermautotrophicus* | 超氧化物歧化酶               | 嗜盐兼嗜热，常见于盐湖沉积物 |
+| 蛋白名称            | 物种来源                                     | 功能/特征                 | 备注             |  
+| --------------- | ---------------------------------------- | --------------------- | -------------- |  
+| **GLPK\_HALSA** | *Halobacterium salinarum*                | 甘油激酶（glycerol kinase） | 经典嗜盐古菌，适应高盐环境  |  
+| **GLPK\_HALMA** | *Haloarcula marismortui*                 | 甘油激酶                  | 极端嗜盐菌，分离自死海    |  
+| **SODF\_METTH** | *Methanothermobacter thermautotrophicus* | 超氧化物歧化酶               | 嗜盐兼嗜热，常见于盐湖沉积物 |  
 
 **噬热菌（Thermophiles）代表性蛋白发现**
-| 蛋白名称            | 物种来源                         | 功能/特征   | 备注                |
-| --------------- | ---------------------------- | ------- | ----------------- |
-| **EFTU\_METCA** | *Methylococcus capsulatus*   | 延伸因子 Tu | 嗜热甲烷氧化菌，常见于热泉或地热区 |
-| **EFTU\_THIDL** | *Thiomonas delicata*         | 延伸因子 Tu | 嗜热硫氧化菌，适应高温酸性环境   |
-| **EFTU\_METPP** | *Methylibium petroleiphilum* | 延伸因子 Tu | 嗜热兼耐石油污染菌，常见于热液系统 |
+| 蛋白名称            | 物种来源                         | 功能/特征   | 备注                |  
+| --------------- | ---------------------------- | ------- | ----------------- |  
+| **EFTU\_METCA** | *Methylococcus capsulatus*   | 延伸因子 Tu | 嗜热甲烷氧化菌，常见于热泉或地热区 |  
+| **EFTU\_THIDL** | *Thiomonas delicata*         | 延伸因子 Tu | 嗜热硫氧化菌，适应高温酸性环境   |  
+| **EFTU\_METPP** | *Methylibium petroleiphilum* | 延伸因子 Tu | 嗜热兼耐石油污染菌，常见于热液系统 |  
 
 这些蛋白的发现支持了阿塔卡马沙漠土壤中存在极端环境微生物的假设，并可为后续研究其干旱适应机制、盐胁迫响应或热稳定性蛋白功能提供线索。  
 
