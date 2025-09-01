@@ -1,7 +1,7 @@
 ---
 layout:     post                    # 使用的布局（不需要改）
 title:      Metagenomic data analysis code              # 标题 
-subtitle:   记录论文中提到的repvgg_b0与csra模块结合方法
+subtitle:   宏基因组生信方法以及代码记录
 date:       2025-1-23              # 时间
 author:     zichuana                     # 作者
 header-img: img/2025/1.jpg    #这篇文章标题背景图片
