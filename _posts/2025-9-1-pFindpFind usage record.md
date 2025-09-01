@@ -131,7 +131,7 @@ Oxidation\[M]为参考视频中推荐
 ✅ Number of Scans Per Half CMTG  
 ✅ Number of Holes in CMTG  
 ✅ Calibration in ppm  
-- timsTOF 本身精度高，通常不需要手动校正。
+- timsTOF 本身精度高，通常不需要手动校正。  
 ✅ Half Window Accuracy Peak Tolerance in ppm  
 - timsTOF 的 MS1 精度在 5–20 ppm，15 ppm 是保守且安全的设置。
 
