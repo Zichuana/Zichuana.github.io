@@ -2,9 +2,9 @@
 layout:     post                    # 使用的布局（不需要改）
 title:      CT金属拖影去除              # 标题 
 subtitle:   常规方法      # 副标题
-date:       2025-12-6              # 时间
+date:       2025-12-4              # 时间
 author:     zichuana                     # 作者
-header-img: img/2025-12-6/a.png   #这篇文章标题背景图片
+header-img: img/2025-12-4/a.png   #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - 考古
@@ -245,14 +245,14 @@ if __name__ == "__main__":
 
     create_summary(ct_hu, ct_hu, results, file_name)
 ```
-![image](/img/2025-12-6/a.png)  
-![image](/img/2025-12-6/b.png)  
+![image](/img/2025-12-4/a.png)  
+![image](/img/2025-12-4/b.png)  
 
 Inpaint能去除金属，拖影使用TV Denoise。  
-![image](/img/2025-12-6/c.png)  
-![image](/img/2025-12-6/d.png)  
+![image](/img/2025-12-4/c.png)  
+![image](/img/2025-12-4/d.png)  
 
 其他案例，但需要更具直方图就行调整。  
-![image](/img/2025-12-6/t1.png)
-![image](/img/2025-12-6/t2.png)
-![image](/img/2025-12-6/t3.png)
+![image](/img/2025-12-4/t1.png)
+![image](/img/2025-12-4/t2.png)
+![image](/img/2025-12-4/t3.png)
