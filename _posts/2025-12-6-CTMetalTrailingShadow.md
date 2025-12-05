@@ -8,7 +8,6 @@ header-img: img/2025-12-6/a.png   #这篇文章标题背景图片
 catalog: true                       # 是否归档
 tags:                               #标签
     - 考古
-    - CT
 ---
 ```python
 import pydicom
